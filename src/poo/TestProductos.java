@@ -32,26 +32,25 @@ public class TestProductos
                         opc2 = Manipulacion.pintaMenu(mnu2,mnu[opc - 1]);
                         switch (opc2)
                         {
-                            case 1:
-                                
+                            case 1:                                
                                 p = Manipulacion.inserta(p, Manipulacion.crearObj(opc));
-                                break;
-                                
+                                break;                                
                              
-                            case 2:
-                                System.out.println("En construccion");
-                                break;
-                                
+                            case 2:                                
+                                p = Manipulacion.eliminar(p, opc);
+                                break;                                
                                 
                             case 3:
                                 System.out.println(Manipulacion.consulta(p, opc, mnu));
                                 break;
                                 
                             case 4:
-                                System.out.println("En construccion");
+                                p = Manipulacion.modificar(p, opc);
                                 break;
+                                
                             case 5:
                                 break;
+                                
                             default:
                                 System.out.println("Opcion incorrecta...");
                         }
