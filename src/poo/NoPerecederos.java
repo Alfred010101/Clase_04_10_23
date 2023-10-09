@@ -5,7 +5,7 @@ package poo;
  *
  * @author alfredo
  */
-public class NoPerecederos extends Productos
+public class NoPerecederos extends Productos implements Machote
 {
     private int lote;
 
@@ -40,6 +40,29 @@ public class NoPerecederos extends Productos
     {
         return super.toString() + lote + "\n";
     }
-    
+
+    @Override
+    public double calcIva(Double monto)
+    {
+        return monto*Productos.IVA;
+    }
+
+    @Override
+    public void accion1()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public int accion2(int x)
+    {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public String accion3(double d, Object x)
+    {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }    
     
 }

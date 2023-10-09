@@ -5,7 +5,7 @@ package poo;
  *
  * @author alfredo
  */
-public class Productos
+public abstract class Productos
 {
     private static int folio;
     private String id;
@@ -13,6 +13,8 @@ public class Productos
     private double precio;
     private int existencia;
 
+    public final static  double IVA = 0.16;
+    
     public Productos()
     {
     }
@@ -118,5 +120,5 @@ public class Productos
         return  id + "\t" + nombre + "\t" + precio + "\t" + existencia + "\t";
     }
     
-    
+    public abstract double calcIva(Double monto);  
 }

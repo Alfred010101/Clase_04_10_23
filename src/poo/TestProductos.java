@@ -12,7 +12,7 @@ public class TestProductos
 {
     public static void main(String[] args)
     {
-        String mnu[] = {"Perecederos", "NoPerecederos", "Consulta Gral", "Salir"};
+        String mnu[] = {"Perecederos", "NoPerecederos", "Consulta Gral", "Presupuesto Productos","Salir"};
         String mnu2[] = {"Altas", "Bajas" , "Consultas", "Modificaciones", "Regresar"};
         
         int opc, opc2;
@@ -62,7 +62,11 @@ public class TestProductos
                     System.out.println(Manipulacion.consultaGral(p));
                     break;
                     
-                case 4: 
+                    case 4:
+                                Manipulacion.calPresupuesto(p);
+                                break;
+                                
+                case 5: 
                     System.out.println("Saliendo...");
                     break;
                     

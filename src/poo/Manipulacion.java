@@ -230,4 +230,32 @@ public class Manipulacion
 
         return s;
     }
+    
+    public static void calPresupuesto(Productos[]p )
+    {
+        if(p != null)
+        {
+            System.out.println("Dame el id del producto a presupuestar: ");
+            int pos = buscarProducto(p, Lecturas.leerEntero(true));
+            if(pos == 1)
+            {
+                System.out.println("Producto no encontrado");
+            }else
+            {
+                System.out.print("Dame la cantidad deseada: ");
+                int cant = Lecturas.leerEntero(true);
+                System.out.println("Productos = " + p[pos].getNombre());
+                System.out.println("Precio = " + p[pos].getPrecio());
+                System.out.println("Cantidad = " + cant);
+                double monto = cant * p[pos].getPrecio();
+                System.out.println("Subtotal = " + monto);
+                double iva = p[pos].calcIva(monto);
+                System.out.println("IVA = " + iva);
+                System.out.println("TOTAL = " + (monto + iva));
+            }
+        }else
+        {
+            System.out.println("No hay productos");
+        }
+    }
 }
