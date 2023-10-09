@@ -1,12 +1,15 @@
 
 package poo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alfredo
  */
-public abstract class Productos
+public abstract class Productos implements Serializable
 {
+    public final static long serialVersionUID = 1L;
     private static int folio;
     private String id;
     private String nombre;

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package poo;
 
 /**
@@ -18,7 +15,7 @@ public class TestProductos
         int opc, opc2;
         
         Productos[] p = null;
-
+        p = (Productos[]) ManipulacionArchivos.cargaArch("Productos.dat");
         do
         {            
             opc = Manipulacion.pintaMenu(mnu, "Menu Principal");
@@ -75,5 +72,6 @@ public class TestProductos
             }
             
         } while (opc!=mnu.length);
+        ManipulacionArchivos.guardar(p, "Productos.dat");
     }
 }
