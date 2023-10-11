@@ -15,6 +15,14 @@ public class TestProductos
         int opc, opc2;
         
         Productos[] p = null;
+        try
+        {
+            Productos.setFolio((Integer) ManipulacionArchivos.carga("folios.dat"));
+        }catch(Exception ex)
+        {
+            Productos.setFolio(0);
+        }
+        
         p = (Productos[]) ManipulacionArchivos.cargaArch("Productos.dat");
         do
         {            
@@ -73,5 +81,6 @@ public class TestProductos
             
         } while (opc!=mnu.length);
         ManipulacionArchivos.guardar(p, "Productos.dat");
+        ManipulacionArchivos.guardar(Productos.getFolio(), "folios.dat");
     }
 }
